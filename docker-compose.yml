@@ -4,6 +4,11 @@ services:
     build:
       context: app
       dockerfile: Dockerfile
-    container_name: flask
+    container_name: flask-mongo-app
+    ports:
+      - "5050:5000"
+  database:
+    image: "mongo:latest"
+    container_name: flask-mongo-db
 
 

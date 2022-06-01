@@ -4,7 +4,8 @@ from flask_restful import Resource, Api, reqparse
 from flask import jsonify, make_response
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://localhost:27017/TodoDB"
+# app.config["MONGO_URI"] = "mongodb://localhost:27017/TodoDB"
+app.config["MONGO_URI"] = "mongodb://flask-mongo-db:27017/TodoDB"
 mongo = PyMongo(app)
 api = Api(app)
 
